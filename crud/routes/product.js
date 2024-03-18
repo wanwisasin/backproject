@@ -31,7 +31,7 @@ exports.addProduct = (req, res) => {
             return res.status(500).send(err);
         }
 
-        if (result.length > 0) {
+        if (result.length < 0) {
             message = 'Product name already exists';
             res.render('add-product.ejs', {
                 message,
